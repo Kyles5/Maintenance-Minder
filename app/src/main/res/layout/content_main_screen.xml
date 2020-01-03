@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainConstraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.scheider.kyle.maintenanceminder.MainScreen"
+    tools:showIn="@layout/app_bar_main">
+    <include layout="@layout/car_info" />
+    <!--
+        android:id="@+id/activity_main_screen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#4b4b4b"
+        tools:context="com.scheider.kyle.maintenanceminder.MainScreen"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="24dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/carInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="carInfoTextView"
+            android:textColor="@android:color/background_light"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/mileageInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/carInfoTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="mileageInfoTextView"
+            android:textColor="@android:color/background_light"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/mileageSinceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mileageInfoTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="mileageSinceTextView"
+            android:textColor="@android:color/background_light"
+            android:textSize="17dp" />-->
+
+
+        <TextView
+            android:id="@+id/nextOilChangeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next Oil Change: "
+            android:textColor="@android:color/background_light"
+            android:textSize="20dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/oilChangeMileageTextView"
+            tools:layout_constraintBaseline_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <Button
+            android:id="@+id/oilChangeCompletedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="oil_change_done"
+            android:text="Completed"
+            tools:layout_constraintTop_creator="1"
+            android:layout_marginTop="160dp"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/nextOilChangeTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/oilChangeMileageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0000000"
+            android:textColor="@android:color/background_light"
+            android:textSize="15dp"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/oilChangeCompletedButton"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toRightOf="@+id/nextOilChangeTextView" />
+
+        <TextView
+            android:id="@+id/nextTireRotationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next Tire Rotation: "
+            android:textColor="@android:color/background_light"
+            android:textSize="20dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tireRotationMileageTextView"
+            tools:layout_constraintBaseline_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/nextOilChangeTextView"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/tireRotationMileageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0000000"
+            android:textColor="@android:color/background_light"
+            android:textSize="15dp"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/tireRotationCompletedButton"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toRightOf="@+id/nextTireRotationTextView" />
+
+        <Button
+            android:id="@+id/tireRotationCompletedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="tire_rotation_done"
+            android:text="Completed"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            app:layout_constraintRight_toRightOf="@+id/oilChangeCompletedButton"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/oilChangeCompletedButton"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/oilChangeCompletedButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

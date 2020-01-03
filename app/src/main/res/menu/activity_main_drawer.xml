@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <group android:checkableBehavior="single">
+            <item android:title="Tracking Maintenance">
+                <menu>
+                <item
+                    android:id="@+id/nav_basic_maintenance"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Basic Maintenance"/>
+                <item
+                    android:id="@+id/nav_fluids"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Fluids" />
+                <item
+                    android:id="@+id/nav_tireLife"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Tire Life"/>
+                </menu>
+            </item>
+        </group>
+
+    <item android:title="Recording Maintenance">
+        <menu>
+            <item
+            android:id="@+id/nav_capture_picture"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Record Receipt"/>
+            <item
+                android:id="@+id/nav_maintenance_log"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Log"/>
+        </menu>
+    </item>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_garage"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="My Garage"/>
+        </menu>
+    </item>
+
+    </menu>
